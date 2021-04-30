@@ -120,7 +120,7 @@ const WeekContainer = () => {
          {dailyData ? <Grid style={{display:'flex', justifyContent: 'center', padding: '50px'}}>
           {dailyData && dayCards()}
           </Grid> : 
-          <h1 style={{color: '#f7910b'}}>ENTER A ZIP CODE!!!</h1> 
+          <h1 style={{color: '#f7910b'}}>ENTER A ZIP CODE!!</h1> 
          }
         </div>
       </div>
