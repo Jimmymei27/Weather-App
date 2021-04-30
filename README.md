@@ -1,9 +1,7 @@
-# Weather-App
+<h1 align="center"> Weather-App
 
 <p align="center">
 <img src="/src/weather.png" width="25%" height="30%">
-<br/>
-<img src="/src/weather.png">
 </p>
 
 # 
