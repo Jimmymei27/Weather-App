@@ -18,8 +18,8 @@ const DayCard = ({ daily, fullData }) => {
   // parsing data to get Temperature, daily high and low
   const dailyData = fullData.filter(x => x.dt_txt.includes(daily.dt_txt.slice(0, 10)));
   const dailyTemp = dailyData.map(x => x.main.temp).reduce((a,c) => a + c)/dailyData.length;
-  const dailyAvgHigh = dailyData.map(x => x.main.temp_max).reduce((a,c) => a + c)/dailyData.length;
-  const dailyAvgLow = dailyData.map(x => x.main.temp_min).reduce((a,c) => a + c)/dailyData.length;
+  const dailyAvgHigh = dailyData.map(x => x.main.temp_max)
+  const dailyAvgLow = dailyData.map(x => x.main.temp_min)
 
   return (
       <Card style={dailyCardStyle}>
@@ -32,8 +32,8 @@ const DayCard = ({ daily, fullData }) => {
         <h4 style={{color: '#f7910b'}}>{daily.weather[0].description.toUpperCase()}</h4>
         <h2 style={{color: '#f7910b'}}>{Math.round(dailyTemp) + "°F"}</h2>
         <div style={{display:'flex', justifyContent: 'space-evenly'}}>
-          <p>HIGH: {dailyAvgHigh.toFixed(2)}°F</p>
-          <p>LOW: {dailyAvgLow.toFixed(2)}°F</p>
+          <p>HIGH: {Math.max(...dailyAvgHigh).toFixed(2)}°F</p>
+          <p>LOW: {Math.min(...dailyAvgLow).toFixed(2)}°F</p>
         </div>
       </Card>
   )
