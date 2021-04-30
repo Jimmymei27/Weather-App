@@ -18,6 +18,7 @@
 1. npm i to install dependencies.
 2. npm run start to start the front end.
 3. visit localhost.
+or visit - https://jimmymei27.github.io/Weather-App/
 
 ## Features 
 - Obtain forecast of cities using zip code.
